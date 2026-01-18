@@ -1,9 +1,11 @@
 import { Component, Input, signal } from "@angular/core";
+import { MatListItem } from "@angular/material/list";
 
 @Component({
   selector: 'MessageLine',
-  template: '<li>{{content}}</li>'
+  template: '<mat-list-item>{{content}}</mat-list-item>',
+  imports: [MatListItem]
 })
 export class MessageLine {
-  @Input() content = "foo"
+  @Input() content = ""
 }
