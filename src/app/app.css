@@ -1,0 +1,8 @@
+.HeaderText {
+  color: white;
+}
+
+.SendMessageBar {
+  display: flex;
+  justify-content: flex-end;
+}
