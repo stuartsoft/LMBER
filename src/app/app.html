@@ -1,20 +1,25 @@
-<mat-toolbar>
-  <mat-toolbar-row style="background-color: royalblue;">
-    <span class="HeaderText">LMBER</span>
-  </mat-toolbar-row>
-<!-- <b>L</b>anguage <b>M</b>odel <b>B</b>asic <b>E</b>xchange <b>R</b>enderer -->
-</mat-toolbar>
+<div class="LMBERWindow">
 
-<ul>
-  @for (item of messageHistory; track $index) {
-    <MessageLine [content]="item.content"></MessageLine>
-  }
-</ul>
+  <mat-toolbar>
+    <mat-toolbar-row style="background-color: royalblue;">
+      <span class="HeaderText">LMBER</span>
+    </mat-toolbar-row>
+  <!-- <b>L</b>anguage <b>M</b>odel <b>B</b>asic <b>E</b>xchange <b>R</b>enderer -->
+  </mat-toolbar>
 
-<div class="SendMessageBar">
-  <mat-form-field style="flex-grow: 1;">
-    <input matInput placeholder="bla bla bla..."/>
-  </mat-form-field>
-  <button matButton>Send</button>
+  <div style="flex-grow: 1;">
+    <ul>
+      @for (item of messageHistory; track $index) {
+        <MessageLine [content]="item.content"></MessageLine>
+      }
+    </ul>
+  </div>
+
+  <div class="SendMessageBar">
+    <mat-form-field style="flex-grow: 1;">
+      <input matInput placeholder="bla bla bla..."/>
+    </mat-form-field>
+    <button matButton>Send</button>
+  </div>
+
 </div>
-
