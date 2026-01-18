@@ -9,7 +9,7 @@
 
   <div style="flex-grow: 1;">
     <ul>
-      @for (item of messageHistory; track $index) {
+      @for (item of messageBroker.history; track $index) {
         <MessageLine [content]="item.content"></MessageLine>
       }
     </ul>
