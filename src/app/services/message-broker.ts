@@ -6,8 +6,6 @@ import { OLMessage } from '../types/OLMessage';
 })
 export class MessageBroker {
   public history : OLMessage[] = [
-    new OLMessage("hi", "User"),
-    new OLMessage("yooo", "assisstant"),
   ]
 
 
