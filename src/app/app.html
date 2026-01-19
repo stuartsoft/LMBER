@@ -8,7 +8,7 @@
   </mat-toolbar>
 
   <div style="flex-grow: 1;">
-    <mat-list>
+    <mat-list >
       @for (item of messageBroker.history; track $index) {
         <MessageLine [content]="item.content"></MessageLine>
       }
