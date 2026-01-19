@@ -1,10 +1,11 @@
-import { Component, Input, signal } from "@angular/core";
-import { MatListItem } from "@angular/material/list";
+import { Component, Input } from "@angular/core";
+import { MatCard, MatCardContent } from "@angular/material/card";
 
 @Component({
   selector: 'MessageLine',
+  styleUrl: 'message-line.css',
   templateUrl: 'message-line.html',
-  imports: [MatListItem]
+  imports: [MatCard, MatCardContent]
 })
 export class MessageLine {
   @Input() content = ""
