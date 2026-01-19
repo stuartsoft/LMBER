@@ -8,20 +8,6 @@ export class MessageBroker {
   public history : OLMessage[] = [
     new OLMessage("hi", "User"),
     new OLMessage("yooo", "assisstant"),
-    new OLMessage("hi", "User"),
-    new OLMessage("yooo", "assisstant"),
-    new OLMessage("hi", "User"),
-    new OLMessage("yooo", "assisstant"),
-    new OLMessage("hi", "User"),
-    new OLMessage("yooo", "assisstant"),
-    new OLMessage("hi", "User"),
-    new OLMessage("yooo", "assisstant"),
-    new OLMessage("hi", "User"),
-    new OLMessage("yooo", "assisstant"),
-    new OLMessage("hi", "User"),
-    new OLMessage("yooo", "assisstant"),
-    new OLMessage("hi", "User"),
-    new OLMessage("yooo", "assisstant"),
   ]
 
 

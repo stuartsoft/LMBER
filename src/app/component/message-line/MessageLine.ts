@@ -3,9 +3,19 @@ import { MatListItem } from "@angular/material/list";
 
 @Component({
   selector: 'MessageLine',
-  template: '<mat-list-item>{{content}}</mat-list-item>',
+  templateUrl: 'message-line.html',
   imports: [MatListItem]
 })
 export class MessageLine {
   @Input() content = ""
+  @Input() from = ""
+
+
+  styleBySender = () => {
+    if (this.from == 'User'){
+      return 'text-align: right;'
+    }
+    return 'text-align: left;'
+  }
+
 }

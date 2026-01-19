@@ -7,14 +7,14 @@
   <!-- <b>L</b>anguage <b>M</b>odel <b>B</b>asic <b>E</b>xchange <b>R</b>enderer -->
   </mat-toolbar>
 
-  <div style="flex-grow: 1;">
-    <mat-list >
-      @for (item of messageBroker.history; track $index) {
-        <MessageLine [content]="item.content"></MessageLine>
-      }
-    </mat-list>
-  </div>
+    <div style="flex-grow: 1;">
+      <mat-list >
+        @for (item of messageBroker.history; track $index) {
+          <MessageLine [content]="item.content" [from]="item.from"></MessageLine>
+        }
+      </mat-list>
+    </div>
 
-  <app-send-message-bar></app-send-message-bar>
+    <app-send-message-bar></app-send-message-bar>
 
 </div>
