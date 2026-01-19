@@ -9,7 +9,7 @@
 
     <div style="flex-grow: 1;">
       <mat-list >
-        @for (item of messageBroker.history; track $index) {
+        @for (item of messageBroker.history(); track $index) {
           <MessageLine [content]="item.content" [from]="item.from"></MessageLine>
         }
       </mat-list>
