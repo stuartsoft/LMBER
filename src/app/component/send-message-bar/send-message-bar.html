@@ -1,6 +1,6 @@
 <div class="SendMessageBar">
   <mat-form-field style="flex-grow: 1;">
-    <input matInput placeholder="bla bla bla..."  [(ngModel)]="draftMessage"/>
+    <input matInput placeholder="bla bla bla..." (keydown.enter)="sendMessage()" [(ngModel)]="draftMessage"/>
   </mat-form-field>
   <button matButton (click)="sendMessage()">Send</button>
 </div>
