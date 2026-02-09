@@ -9,6 +9,7 @@ export class MessageBroker {
   httpClient = inject(HttpClient)
   public history = signal([] as OLMessage[])
 
+
   sendMessage(content: string) {
     this.history.update(oldHistory => oldHistory.concat(new OLMessage(content, "User")))
     let requestData = {
@@ -17,7 +18,6 @@ export class MessageBroker {
       stream: true
     }
 
-    type ResponseShape = { message: { content: string, role: string } }
 
     // this.httpClient.post('http://localhost:11434/api/chat', requestData).subscribe(response => {
 
