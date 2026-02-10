@@ -1,6 +1,7 @@
 import { inject, Injectable, signal } from '@angular/core';
-import { OLMessage } from '../types/OLMessage';
+
 import { HttpClient } from '@angular/common/http';
+import { OLMessage } from '../../types/OLMessage';
 
 @Injectable({
   providedIn: 'root',
