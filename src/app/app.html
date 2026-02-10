@@ -4,19 +4,24 @@
     <mat-toolbar-row style="background-color: royalblue;">
       <span class="HeaderText">LMBER</span>
     </mat-toolbar-row>
-  <!-- <b>L</b>anguage <b>M</b>odel <b>B</b>asic <b>E</b>xchange <b>R</b>enderer -->
+    <!-- <b>L</b>anguage <b>M</b>odel <b>B</b>asic <b>E</b>xchange <b>R</b>enderer -->
   </mat-toolbar>
 
-    <div style="flex-grow: 1;">
-      <div style="display: flex; justify-content: center;">
-        <mat-list style="max-width: 700px;" >
-          @for (item of messageBroker.history(); track $index) {
-            <MessageLine [content]="item.content" [from]="item.from"></MessageLine>
-          }
-        </mat-list>
-      </div>
+  <div style="flex-grow: 1;">
+    <div style="display: flex; justify-content: center;">
+      <mat-list style="max-width: 700px;">
+        @for (item of messageBroker.history(); track $index) {
+        <MessageLine [content]="item.content" [from]="item.from"></MessageLine>
+        }
+      </mat-list>
     </div>
+  </div>
 
-    <app-send-message-bar></app-send-message-bar>
+  <div style="display:flex; justify-content: center;">
+    <div style="width: 700px;">
+      <app-send-message-bar ></app-send-message-bar>
+      <div style="font-size: small;"><b>Don't blindly trust language models.</b></div>
+    </div>
+  </div>
 
 </div>
