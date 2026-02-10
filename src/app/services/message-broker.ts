@@ -18,15 +18,6 @@ export class MessageBroker {
       stream: true
     }
 
-
-    // this.httpClient.post('http://localhost:11434/api/chat', requestData).subscribe(response => {
-
-    //   let responseStuff = response as ResponseShape
-    //   let responseMessage = new OLMessage(responseStuff.message.content, responseStuff.message.role)
-    //   this.history.update(oldHistory => oldHistory.concat(responseMessage))
-    //   console.log(this.history())
-    // })
-
     this.history.update(oldHistory => oldHistory.concat(new OLMessage("", "assistant")))
     fetch('http://localhost:11434/api/chat', { method: "POST", body: JSON.stringify(requestData) }).then(response => {
       let rs = response.body as ReadableStream
