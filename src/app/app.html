@@ -3,9 +3,9 @@
   <mat-toolbar>
     <mat-toolbar-row style="background-color: royalblue;">
       <span class="HeaderText">LMBER</span>
-      <mat-select>
+      <mat-select [(value)]="ollamaService.selectedModel" class="ModelSelector">
         @for (model of ollamaService.availableModels(); track model.name){
-          <mat-option>{{model.name}}</mat-option>
+          <mat-option value="{{model.name}}">{{model.name}}</mat-option>
         }
       </mat-select>
     </mat-toolbar-row>

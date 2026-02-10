@@ -5,6 +5,10 @@
   height: 100%;
 }
 
+.ModelSelector {
+  width: 400px
+}
+
 .HeaderText {
   color: white;
 }

@@ -2,19 +2,21 @@ import { inject, Injectable, signal } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 import { OLMessage } from '../../types/OLMessage';
+import { OllamaService } from '../ollamaService/ollama-service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MessageBroker {
   httpClient = inject(HttpClient)
+  ollamaService = inject(OllamaService)
   public history = signal([] as OLMessage[])
 
 
   sendMessage(content: string) {
     this.history.update(oldHistory => oldHistory.concat(new OLMessage(content, "User")))
     let requestData = {
-      model: "gemma3",
+      model: this.ollamaService.selectedModel(),
       messages: this.history().map((message) => { return { role: message.from, content: message.content } }),
       stream: true
     }
